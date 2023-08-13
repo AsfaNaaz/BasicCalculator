@@ -31,22 +31,13 @@
     </div>
     <script>
         let buttons=document.querySelector('.buttons');
-        //it is used to select an element based on 
-        //css selector this means you can select 
-        // the element based on id class or any other selecttor
-        //query selector retrieves the first element it matches 
-       
         let btn=document.querySelectorAll('span');
-        //query selectorall used to retrieve the all element matches.
         let value=document.getElementById('value');
-        //it select the element only for the given id  
-        //it only brings one value 
         let toggleBtn=document.querySelector('.toggleBtn');
         let body=document.querySelector('body');
         for(let i=0;i<btn.length;i++)
         {
-            btn[i].addEventListener("click",function(){//an inbuilt function in JavaScript which takes the event to listen for, and a second argument to be called whenever the described event gets fired. 
-                //click p click krne s event hua toh humlog funtion ko call kiye 
+            btn[i].addEventListener("click",function(){
                 if(this.innerHTML=="="){
                     value.innerHTML=eval(value.innerHTML);
                 }else{
@@ -55,7 +46,6 @@
                     }
                     else{
                         value.innerHTML +=this.innerHTML;
-
                     }
                 }
             })
